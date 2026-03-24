@@ -44,7 +44,7 @@ export default function Home() {
           className="relative w-32 h-32 rounded-3xl bg-gradient-to-br from-yellow-400 to-yellow-600 p-1 mx-auto"
         >
           <div className="w-full h-full rounded-[1.4rem] bg-zinc-900 flex items-center justify-center overflow-hidden">
-            <img src="/my-avatar.jpg" className="w-full h-full object-cover" alt="杨sir" />
+            <img src="/my-avatar.JPG" className="w-full h-full object-cover" alt="杨sir" />
           </div>
         </motion.div>
 
@@ -181,7 +181,7 @@ export default function Home() {
             >
               <h3 className="text-xl font-bold">扫码添加私域</h3>
               <div className="bg-white p-2 rounded-2xl mx-auto w-64 h-64 overflow-hidden">
-                <img src="/my-qrcode.png" alt="QR Code" className="w-full h-full object-cover" />
+                <img src="/my-qrcode.jpg" alt="QR Code" className="w-full h-full object-cover" />
               </div>
               <p className="text-zinc-400 text-sm">期待与您深度交流</p>
               <button
