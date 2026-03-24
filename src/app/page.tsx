@@ -46,7 +46,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white p-6 md:p-12 max-w-2xl mx-auto space-y-12">
-      {/* Hero Section */}
       <section className="space-y-6 pt-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +53,8 @@ export default function Home() {
           className="relative w-32 h-32 rounded-3xl bg-gradient-to-br from-yellow-400 to-yellow-600 p-1 mx-auto"
         >
           <div className="w-full h-full rounded-[1.4rem] bg-zinc-900 flex items-center justify-center overflow-hidden">
-            <img src="/my-avatar.jpg" className="w-full h-full object-cover" alt="杨sir" />
+            {/* 注意：这里改成了您仓库里的真实文件名 */}
+            <img src="/IMG_9555.JPG" className="w-full h-full object-cover" alt="杨sir" />
           </div>
         </motion.div>
 
@@ -82,7 +82,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Stats Section */}
       <section className="grid grid-cols-2 gap-4">
         {stats.map((stat, index) => (
           <motion.div
@@ -99,7 +98,6 @@ export default function Home() {
         ))}
       </section>
 
-      {/* Timeline Section */}
       <section className="space-y-6">
         <h2 className="text-xl font-bold flex items-center gap-2">
           <Calendar className="w-5 h-5 text-yellow-500" />
@@ -130,7 +128,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Business Section */}
       <section className="space-y-6">
         <h2 className="text-xl font-bold flex items-center gap-2">
           <Zap className="w-5 h-5 text-yellow-500" />
@@ -156,7 +153,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="space-y-6 pb-20">
         <h2 className="text-xl font-bold flex items-center gap-2">
           <Mail className="w-5 h-5 text-yellow-500" />
@@ -173,12 +169,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="text-center py-8 border-t border-zinc-900">
         <p className="text-xs text-zinc-600">© 2026 杨sir. 极致专注，长期复利。</p>
       </footer>
 
-      {/* 二维码弹窗 */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
@@ -197,7 +191,7 @@ export default function Home() {
             >
               <h3 className="text-xl font-bold">扫码添加私域</h3>
               <div className="bg-white p-2 rounded-2xl mx-auto w-64 h-64 overflow-hidden">
-                <img src="/my-qrcode.png" alt="QR Code" className="w-full h-full object-cover" />
+                <img src="/my-qrcode.jpg" alt="QR Code" className="w-full h-full object-cover" />
               </div>
               <p className="text-zinc-400 text-sm">期待与您深度交流</p>
               <button
