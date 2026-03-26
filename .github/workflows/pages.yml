@@ -56,4 +56,26 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4          GITHUB_REPO_NAME: ${{ github.event.repository.name }}
+
+      - name: Disable Jekyll
+        run: touch out/.nojekyll
+
+      - name: Set custom domain
+        run: echo "yangzhuo.uk" > out/CNAME
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
